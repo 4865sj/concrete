@@ -16,11 +16,6 @@ fn save_client_key(data: ClientKey) {
     bincode::serialize_into(file, &data).unwrap();
 }
 
-    // load datas
-   // let mut new_server_key: ServerKey = read_server_key();
-   // let mut new_client_key: ClientKey = read_client_key();
-
-   // set_server_key(new_server_key);
 fn read_server_key() -> ServerKey {
     let mut file = std::io::BufReader::new(std::fs::File::open("server_key.bin").unwrap());
 
